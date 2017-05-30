@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270382CF1ED8B04F003C97CA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270382CE1ED8B04F003C97CA /* Functions.swift */; };
 		27299C941EBC1E50005D99CE /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27299C931EBC1E50005D99CE /* SignUp.swift */; };
 		27299C961EBC9424005D99CE /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27299C951EBC9424005D99CE /* LogIn.swift */; };
 		27299C981EBCAC83005D99CE /* Font0.otf in Resources */ = {isa = PBXBuildFile; fileRef = 27299C971EBCA5D8005D99CE /* Font0.otf */; };
@@ -15,10 +16,10 @@
 		279D560F1EBBF0B300CD9E97 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279D560E1EBBF0B300CD9E97 /* Friends.swift */; };
 		279D56111EBBF0C200CD9E97 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279D56101EBBF0C200CD9E97 /* Profile.swift */; };
 		279D56131EBBF51900CD9E97 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279D56121EBBF51900CD9E97 /* Create.swift */; };
+		27D967741EDCE6F3006AC18A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D967721EDCE6F3006AC18A /* LaunchScreen.storyboard */; };
 		27FB6FAB1EBBE8A800ED66B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FB6FAA1EBBE8A800ED66B5 /* AppDelegate.swift */; };
 		27FB6FB21EBBE8A800ED66B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FB6FB01EBBE8A800ED66B5 /* Main.storyboard */; };
 		27FB6FB41EBBE8A800ED66B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FB6FB31EBBE8A800ED66B5 /* Assets.xcassets */; };
-		27FB6FB71EBBE8A800ED66B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FB6FB51EBBE8A800ED66B5 /* LaunchScreen.storyboard */; };
 		27FB6FC21EBBE8A800ED66B5 /* SpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FB6FC11EBBE8A800ED66B5 /* SpotTests.swift */; };
 		27FB6FCD1EBBE8A800ED66B5 /* SpotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FB6FCC1EBBE8A800ED66B5 /* SpotUITests.swift */; };
 		27FB6FDB1EBBE8C600ED66B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27FB6FDA1EBBE8C600ED66B5 /* GoogleService-Info.plist */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0094C22AD91E70B3394CB1DE /* Pods-SpotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotUITests/Pods-SpotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0E0C47EE84A52EC1C5057797 /* Pods_Spot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		270382CE1ED8B04F003C97CA /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		27299C931EBC1E50005D99CE /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		27299C951EBC9424005D99CE /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		27299C971EBCA5D8005D99CE /* Font0.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Font0.otf; sourceTree = "<group>"; };
@@ -55,11 +57,11 @@
 		279D560E1EBBF0B300CD9E97 /* Friends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		279D56101EBBF0C200CD9E97 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		279D56121EBBF51900CD9E97 /* Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
+		27D967731EDCE6F3006AC18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27FB6FA71EBBE8A800ED66B5 /* Spot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FB6FAA1EBBE8A800ED66B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27FB6FB11EBBE8A800ED66B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27FB6FB31EBBE8A800ED66B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		27FB6FB61EBBE8A800ED66B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27FB6FB81EBBE8A800ED66B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27FB6FBD1EBBE8A800ED66B5 /* SpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FB6FC11EBBE8A800ED66B5 /* SpotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTests.swift; sourceTree = "<group>"; };
@@ -138,9 +140,10 @@
 				279D56121EBBF51900CD9E97 /* Create.swift */,
 				279D560E1EBBF0B300CD9E97 /* Friends.swift */,
 				279D56101EBBF0C200CD9E97 /* Profile.swift */,
+				270382CE1ED8B04F003C97CA /* Functions.swift */,
 				27FB6FB31EBBE8A800ED66B5 /* Assets.xcassets */,
 				27FB6FB01EBBE8A800ED66B5 /* Main.storyboard */,
-				27FB6FB51EBBE8A800ED66B5 /* LaunchScreen.storyboard */,
+				27D967721EDCE6F3006AC18A /* LaunchScreen.storyboard */,
 				27FB6FB81EBBE8A800ED66B5 /* Info.plist */,
 				27FB6FDA1EBBE8C600ED66B5 /* GoogleService-Info.plist */,
 				27299C971EBCA5D8005D99CE /* Font0.otf */,
@@ -305,10 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27FB6FB71EBBE8A800ED66B5 /* LaunchScreen.storyboard in Resources */,
 				27FB6FB41EBBE8A800ED66B5 /* Assets.xcassets in Resources */,
 				27FB6FB21EBBE8A800ED66B5 /* Main.storyboard in Resources */,
 				27299C981EBCAC83005D99CE /* Font0.otf in Resources */,
+				27D967741EDCE6F3006AC18A /* LaunchScreen.storyboard in Resources */,
 				27FB6FDB1EBBE8C600ED66B5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +477,7 @@
 			files = (
 				279D56111EBBF0C200CD9E97 /* Profile.swift in Sources */,
 				279D560F1EBBF0B300CD9E97 /* Friends.swift in Sources */,
+				270382CF1ED8B04F003C97CA /* Functions.swift in Sources */,
 				27FB6FAB1EBBE8A800ED66B5 /* AppDelegate.swift in Sources */,
 				279D56091EBBF08400CD9E97 /* Map.swift in Sources */,
 				27299C941EBC1E50005D99CE /* SignUp.swift in Sources */,
@@ -515,20 +519,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		27D967721EDCE6F3006AC18A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27D967731EDCE6F3006AC18A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		27FB6FB01EBBE8A800ED66B5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				27FB6FB11EBBE8A800ED66B5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		27FB6FB51EBBE8A800ED66B5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27FB6FB61EBBE8A800ED66B5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

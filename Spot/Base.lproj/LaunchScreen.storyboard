@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,21 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-U3-rFf">
-                                <rect key="frame" x="59" y="259" width="257" height="149"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="naa-gG-dUG">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="eb2-bN-mc9"/>
-                                    <constraint firstAttribute="width" constant="257" id="jga-vj-fF4"/>
+                                    <constraint firstAttribute="height" constant="240" id="W3x-Zj-VLL"/>
+                                    <constraint firstAttribute="width" secondItem="naa-gG-dUG" secondAttribute="height" multiplier="1:1" id="dRd-aO-ivf"/>
+                                    <constraint firstAttribute="width" constant="240" id="lKf-B1-bk2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="90"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.6470588235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.74509803921568629" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Jih-U3-rFf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Fhh-6O-S0b"/>
-                            <constraint firstItem="Jih-U3-rFf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="chV-DG-Iya"/>
+                            <constraint firstItem="naa-gG-dUG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1nN-oG-xMc"/>
+                            <constraint firstItem="naa-gG-dUG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ElX-qD-1U6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -44,4 +43,7 @@
             <point key="canvasLocation" x="144.80000000000001" y="222.63868065967017"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pin" width="2000" height="2000"/>
+    </resources>
 </document>

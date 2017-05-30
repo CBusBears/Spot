@@ -10,53 +10,55 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     var window: UIWindow?
-    var ref: FIRDatabaseReference!
+    var ref: DatabaseReference!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        FIRApp.configure()
-        ref = FIRDatabase.database().reference()
-        let (username, password, email) = retrieveLocalArchivedData()
-        if username != "nil" && password != "nil" && email != "nil" {
-            
-            FIRAuth.auth()?.signIn(withEmail: username!, password: password!) {
-                (user, error) in
-                
-                if error == nil {
-                    
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initVC : UIViewController = storyboard.instantiateViewController(withIdentifier: "Map") as UIViewController
-                    self.window = UIWindow(frame: UIScreen.main.bounds)
-                    self.window?.rootViewController = initVC
-                    self.window?.makeKeyAndVisible()
-                    
-                } else {
-                    
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let initVC : UIViewController = storyboard.instantiateViewController(withIdentifier: "SignUp") as UIViewController
-                    self.window = UIWindow(frame: UIScreen.main.bounds)
-                    self.window?.rootViewController = initVC
-                    self.window?.makeKeyAndVisible()
-                    
-                    let alert = UIAlertController(title: "Oops", message:
-                        "We could not find an account with these credentials.", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-                    initVC.present(alert, animated: true, completion: nil)
-                    
-                }
-                
-            }
-            
-        } else {
-            
+        
+        
+        /*
+        //Clean User Defaults
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            UserDefaults.standard.removeObject(forKey: key.description)
+        }
+        */
+        
+        
+        //Configure Firebase
+        FirebaseApp.configure()
+        ref = Database.database().reference()
+        //Read Local Credentials
+        let (password, email) = retrieveLocalArchivedData()
+        //If Credentials are Not Nil
+        if password != "nil" && email != "nil" {
+            //Open the Init Waiting Page
             let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initVC : UIViewController = storyboard.instantiateViewController(withIdentifier: "SignUp") as UIViewController
+            let initVC: UIViewController = storyboard.instantiateViewController(withIdentifier: "Init") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initVC
             self.window?.makeKeyAndVisible()
-            
+            //Attempt Login
+            Auth.auth().signIn(withEmail: email!, password: password!) {
+                (user, error) in
+                if error == nil {
+                    //Login Successful
+                    //Init open Map
+                    self.window?.rootViewController?.performSegue(withIdentifier: "toRootFromInit", sender: self)
+                } else {
+                    //Corrupt Credentials opening login page
+                    self.window?.rootViewController?.performSegue(withIdentifier: "toLoginFromInit", sender: self)
+                }
+            }
+        }
+        else {
+            //No credentials Opening Signup
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initVC : UIViewController = storyboard.instantiateViewController(withIdentifier: "LogIn") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initVC
+            self.window?.makeKeyAndVisible()
         }
         return true
     }
@@ -81,23 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func retrieveLocalArchivedData() -> (String?,String?,String?) {
-        let userExist = isKeyPresentInUserDefaults(key: "Username")
-        if userExist {
-            return(
-                UserDefaults.standard.string(forKey: "Username"),
-                UserDefaults.standard.string(forKey: "Password"),
-                UserDefaults.standard.string(forKey: "Email")
-            )
-        } else {
-            return ("nil","nil","nil")
-        }
-    }
-    
-    func isKeyPresentInUserDefaults(key: String) -> Bool {
-        return UserDefaults.standard.object(forKey: key) != nil
     }
 
 }

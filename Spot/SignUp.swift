@@ -7,14 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUp: UIViewController {
     
-    @IBOutlet var tityl: UILabel!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var username: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var repassword: UITextField!
+    @IBOutlet var signup: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addbackgroundImage(image: UIImage(named: "Background2")!)
+        
+        addbackgroundImage(image: UIImage(named: "Background8")!)
+        
+        //let color = hexStringToUIColor(hex: "#11BE3E")
+        
+        email.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        password.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        username.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        repassword.setValue(UIColor.white, forKeyPath: "_placeholderLabel.textColor")
+        
+        signup.layer.cornerRadius = 5.0
+        signup.clipsToBounds = true
+        email.borderStyle = UITextBorderStyle.roundedRect
+        password.borderStyle = UITextBorderStyle.roundedRect
+        username.borderStyle = UITextBorderStyle.roundedRect
+        repassword.borderStyle = UITextBorderStyle.roundedRect
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,22 +42,6 @@ class SignUp: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-        if ((cString.characters.count) != 6) {
-            return UIColor.gray
-        }
-        var rgbValue:UInt32 = 0
-        Scanner(string: cString).scanHexInt32(&rgbValue)
-        
-        return UIColor(red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0, green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0, blue: CGFloat(rgbValue & 0x0000FF) / 255.0, alpha: CGFloat(1.0))
-        
-    }
-
     func addbackgroundImage(image: UIImage) {
         let background = image
         
@@ -49,6 +53,9 @@ class SignUp: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
+    }
+    @IBAction func openLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "toLoginFromSignup", sender: self)
     }
     
 }
